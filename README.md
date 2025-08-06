@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 AI Chatbot Microservice with Groq + LLaMA 3 (Next.js + MongoDB)
 
-## Getting Started
+This project is an AI-powered chatbot microservice that you can plug into **any website or app**. It uses:
 
-First, run the development server:
+- 🧠 [Groq](https://console.groq.com/) + **LLaMA 3 70B (Versatile)** model for free AI responses
+- 🧱 **Next.js App Router** for combining frontend + API backend
+- 🪄 **Tailwind CSS** for styling
+- 🌱 **MongoDB Atlas** for message history
+- 🔌 Designed to be used as a **microservice with a JS SDK** or directly from Postman
+
+---
+
+## 🚀 Features
+
+✅ Chat with LLaMA 3 (70B) for free using Groq API  
+✅ Stores user/assistant messages in MongoDB  
+✅ API-first architecture for easy integration  
+✅ JavaScript SDK for embedding on any site  
+✅ Built with Next.js App Router + TypeScript + Tailwind
+
+---
+
+---
+
+## 🔧 Setup & Installation
+
+### 1. Clone the Repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/ai-chatbot.git
+cd ai-chatbot
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Set Environment Variables
+Create a .env file:
+```bash 
+GROQ_API_KEY=your_groq_api_key_here
+MONGODB_URI=your_mongodb_connection_uri_here
+```
+### 4. Run Locally
+```bash 
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📬 API Usage
+Endpoint
+POST /api/chat
 
-## Learn More
+### 🧠 LLaMA 3 via Groq
+Model used: llama-3-70b-8192 or llama-3-3-70b-versatile
+Docs: https://console.groq.com/docs
 
-To learn more about Next.js, take a look at the following resources:
+### 🛠 Technologies Used
+Next.js
+TypeScript
+Tailwind CSS
+MongoDB Atlas
+Groq API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🙌 Credits
+Built with ❤️ AKshit
+Powered by Groq + Meta’s LLaMA 3
