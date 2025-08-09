@@ -12,17 +12,29 @@ export async function POST(req: NextRequest) {
   await Message.create({ role: "user", content: message });
 
   try {
-    const groqRes = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
-        messages: [{ role: "user", content: message }],
-      }),
-    });
+    // … earlier imports and connectMongo() call …
+
+  // Before creating the Groq request, change this block:
+  const groqRes = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: "llama-3.3-70b-versatile",
+      messages: [
+        {
+          role: "system",
+          content: `You are a customer-support assistant.
+                    • Keep answers **short and to the point**.
+                    • Use bullet points or very brief paragraphs.
+                    `
+        },
+        { role: "user", content: message }
+      ],
+    }),
+  });
 
     // ❗ Check for non-OK status
     if (!groqRes.ok) {

@@ -53,16 +53,21 @@ POST /api/chat
 
 ### 🧠 LLaMA 3 via Groq
 Model used: llama-3-70b-8192 or llama-3-3-70b-versatile
+
 Docs: https://console.groq.com/docs
 
 ### 🛠 Technologies Used
 Next.js
+
 TypeScript
+
 Tailwind CSS
+
 MongoDB Atlas
+
 Groq API
 
 
 ### 🙌 Credits
-Built with ❤️ AKshit
+Built with ❤️ Akshit
 Powered by Groq + Meta’s LLaMA 3
