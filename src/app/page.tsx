@@ -162,7 +162,7 @@ export default function Home() {
             }`}>
               <div>
                 <h3 className="font-semibold text-white text-sm sm:text-base">Support Chat</h3>
-                <p className="text-xs opacity-90 text-white">We're here to help!</p>
+                <p className="text-xs opacity-90 text-white">We&apos;re here to help!</p>
               </div>
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <button

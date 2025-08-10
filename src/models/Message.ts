@@ -4,7 +4,7 @@ import mongoose, { Schema, Document } from "mongoose";
 export interface IMessage extends Document {
   role: "user" | "assistant" | string;
   content: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
   createdAt: Date;
 }
 
